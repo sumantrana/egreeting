@@ -1,0 +1,66 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>E - Greeting Threshould</title>
+    <link href="App_Themes/black_world.css" type="text/css" />
+</head>
+<body style="margin:0">
+    <form id="form1" runat="server">
+    <div style="text-align:center">
+    <table border="1" cellpadding="0" cellspacing="0" width="815px" bgcolor="#ffffff" bordercolor="black">
+            <tr>
+                <td colspan="1" style="font-weight: bold; font-size: 30pt;  color: #fffbd6; font-family: Forte; height: 64px;" valign="middle" bgcolor="#000000">
+                    E - Greeting Threshold</td>
+            </tr>
+            <tr>
+                <td style="background-color:#fffbd6; " colspan="1" align="center">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2"
+                        Font-Bold="True" Font-Names="Verdana" Font-Size="small" ForeColor="#990000" Orientation="Horizontal"
+                        StaticSubMenuIndent="10px" Width="100%" Height="25px">
+                        <Items>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/frmAdminLogin.aspx" Text="Admin Login" Value="Admin Login">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem Text="User Login" Value="User Login" NavigateUrl="~/frmUserLogin.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmAboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmFeedback.aspx" Text="Feedback" Value="Feedback"></asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmContactUs.aspx" Text="Contact Us" Value="Contact Us">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                    </asp:Menu>
+                    </td>
+            </tr>
+            <tr>
+                <td  bgcolor="#FFFBD6">
+                  <div style="height:475px">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                  </div>
+                </td>
+            </tr>
+        <tr>
+            <td style="font-weight: bold; font-size: 30pt;  color: #fffbd6; font-family: Forte; height: 25px;" valign="middle" bgcolor="#000000">
+                <span style="font-size: 9pt">&copy; Copyright Reserved 2010<a href="http://www.techinnova.co.in">TechInnova</a></span></td>
+        </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

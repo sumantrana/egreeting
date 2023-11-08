@@ -1,0 +1,80 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMenuMasterPage.master.cs" Inherits="Admin_AdminMenuMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+</head>
+<body style="margin:0">
+    <form id="form2" runat="server">
+    <div style="text-align:center">
+    <table border="1" cellpadding="0" cellspacing="0" width="815px" bgcolor="#ffffff" bordercolor="black">
+            <tr>
+                <td colspan="1" style="font-weight: bold; font-size: 30pt;  color: #fffbd6; font-family: Forte; height: 64px;" valign="middle" bgcolor="#000000">
+                    E - Greeting Threshold</td>
+            </tr>
+            <tr>
+                <td style="background-color:#fffbd6; " colspan="1" align="left">
+                  <asp:Menu ID="Menu1" runat="server" Font-Bold="True" ForeColor="#990000" Orientation="Horizontal"
+                        Width="100%" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Small" StaticEnableDefaultPopOutImage="False" StaticSubMenuIndent="10px" Height="20px">
+                        <Items>
+                            <asp:MenuItem Text="||" Value="|||"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/frmAdminHome.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem Text="Add" Value="Add">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddCountry.aspx" Text="Country" Value="Country">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmAddState.aspx" Text="State" Value="State"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmViewOutbox.aspx" Text="Outbox" Value="Outbox">
+                                </asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem Text="View" Value="View">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmViewAllUser.aspx" Text="All User" Value="All User">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmViewUserLoginHistory.aspx" Text="User Login History"
+                                    Value="User Login History"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/frmVIewUserFeedback.aspx" Text="User Feedback"
+                                    Value="User Feedback"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem Text="Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/Admin/frmUserRegisterationBYDate.aspx" Text="Member Report"
+                                    Value="Member Report"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem Text="Change Password" Value="Change Password" NavigateUrl="~/Admin/frmAdminChangePassword.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Admin/frmLogout.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="|||"></asp:MenuItem>
+                        </Items>
+                        <DynamicMenuStyle BackColor="#FFFBD6" BorderColor="#FFE0C0" BorderWidth="1px" />
+                      <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                      <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                      <StaticSelectedStyle BackColor="#FFCC66" />
+                      <DynamicSelectedStyle BackColor="#FFCC66" />
+                      <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                      <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                    </asp:Menu>
+                    </td>
+            </tr>
+            <tr>
+                <td  bgcolor="#FFFBD6">
+                  <div style="height:480px">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                  </div>
+                </td>
+            </tr>
+        <tr>
+            <td style="font-weight: bold; font-size: 30pt;  color: #fffbd6; font-family: Forte; height: 25px;" valign="middle" bgcolor="#000000">
+                <span style="font-size: 9pt">&copy; Copyright Reserved 2010<a href="http://www.techinnova.co.in">TechInnova</a></span></td>
+        </tr>
+        </table>
+    </div>
+    </form>
+</body>
+
+</html>

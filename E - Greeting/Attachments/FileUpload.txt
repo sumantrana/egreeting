@@ -1,0 +1,39 @@
+
+        if (fileUploadMemberImage.PostedFile.FileName != null)
+        {
+            string imgType;
+            string imgName;
+            int imgSize;
+            string ImageRepository_FolderName;
+            imgType = fileUploadMemberImage.PostedFile.ContentType;
+            if (imgType == "image/jpg" || imgType == "image/pjpeg" || imgType == "image/gif" || imgType == "image/bmp" || imgType == "image/x-png")
+            {
+                imgSize = fileUploadMemberImage.PostedFile.ContentLength;
+                if (imgSize > 1000000)
+                {
+                    lblerror.Visible = true;
+                    lblerror.Text = "Please select an image of length below 1MB";
+                    return;
+                }
+                else
+                {
+                    lblerror.Visible = false;
+                    imgName = Path.GetFileName(fileUploadMemberImage.PostedFile.FileName);
+                    objMember.pro_MemberImage = imgName;
+                }
+                ImageRepository_FolderName = Server.MapPath(ConfigurationManager.AppSettings["MemberImage"]);
+                if (!Directory.Exists(ImageRepository_FolderName))
+                    Directory.CreateDirectory(ImageRepository_FolderName);
+                fileUploadMemberImage.PostedFile.SaveAs(ImageRepository_FolderName + imgName);
+            }
+            else
+            {
+                lblerror.Visible = true;
+                lblerror.Text = "Please select an image type of jpg or jpeg or gif or bmp or x-png";
+            }
+        }
+        else
+        {
+            lblerror.Visible = true;
+            lblerror.Text = "Please upload an image";        
+        }

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E - Greeting", ".", "{D11D2E6D-E37E-473F-8919-1B03C98DA7D1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/E - Greeting"
+		Debug.AspNetCompiler.PhysicalPath = "..\E - Greeting\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\E - Greeting\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/E - Greeting"
+		Release.AspNetCompiler.PhysicalPath = "..\E - Greeting\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\E - Greeting\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1376"
+		SlnRelativePath = "..\E - Greeting\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D11D2E6D-E37E-473F-8919-1B03C98DA7D1}.Debug|.NET.ActiveCfg = Debug|.NET
+		{D11D2E6D-E37E-473F-8919-1B03C98DA7D1}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAF1ED08-CA09-4B4E-BBC8-7A9792371B61}
+	EndGlobalSection
+EndGlobal
